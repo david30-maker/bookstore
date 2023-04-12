@@ -18,12 +18,22 @@ import AddBook from '../components/addBooks';
 //     author: 'Charles Finney',
 //   },
 // ];
-const Book = () => (
+// const Book = () => (
+//   <div>
+//     <h1>All Books</h1>
+//     <BooksList books={books} />
+//     <AddBook />
+//   </div>
+// );
+
+// export default Book;
+
+const Books = () => (
   <div>
     <h1>All Books</h1>
-    <BooksList books={books} />
+    <BooksList />
     <AddBook />
   </div>
 );
 
-export default Book;
+export default Books;

@@ -16,6 +16,6 @@ const categoriesSlice = createSlice({
   },
 });
 
-console.log(categoriesSlice);
+// console.log(categoriesSlice);
 
 export default categoriesSlice.reducer;

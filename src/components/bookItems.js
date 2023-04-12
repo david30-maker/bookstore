@@ -1,13 +1,26 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/booksSlice';
 
-const BookItem = ({ book }) => (
-  <div className="book-item">
-    <div className="book-title">{JSON.parse(book).title}</div>
-    <div className="book-author">{JSON.parse(book).author}</div>
-    <button type="button" className="book-item__remove" id={JSON.parse(book).id}>Remove Book</button>
-  </div>
-);
+const BookItem = ({ book }) => {
+  const dispatch = useDispatch();
 
+  return (
+    <div className="book-item">
+
+      <div className="book-title">{JSON.parse(book).title}</div>
+      <div className="book-author">{JSON.parse(book).author}</div>
+      <button
+        type="button"
+        className="book-remove"
+        id={JSON.parse(book).id}
+        onClick={(e) => dispatch(removeBook(+e.target.id))}
+      >
+        Remove Book
+      </button>
+    </div>
+  );
+};
 BookItem.propTypes = {
   book: PropTypes.string.isRequired,
 };
