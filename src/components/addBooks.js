@@ -1,8 +1,8 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuid } from 'uuid';
 import { useState } from 'react';
 import { addBook } from '../redux/books/booksSlice';
-
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -29,12 +29,15 @@ const AddBook = () => {
       className="add-form"
     >
       <span>Add Book</span>
-      <input onChange={(evet) => setTitle(evet.target.value)}
-        type="text" placeholder="title" />
+      <input
+        onChange={(evet) => setTitle(evet.target.value)}
+        type="text"
+        placeholder="title"
+      />
       <select>
         {categories.map((category) => (
           <option
-            omSelect={(evet) => setCategory(evet.target.value)}
+            onSelect={(evet) => setCategory(evet.target.value)}
             key={category}
             value={category}
           >
@@ -42,9 +45,11 @@ const AddBook = () => {
           </option>
         ))}
       </select>
-      <input onChange={(evet) =>
-        setAuthor(evet.target.value)}
-        type="name" placeholder="Author" />
+      <input
+        onChange={(evet) => setAuthor(evet.target.value)}
+        type="name"
+        placeholder="Author"
+      />
       <button
         type="submit"
         onClick={(evet) => getBook(evet)}

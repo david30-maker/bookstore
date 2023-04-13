@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { v4 as uuidv } from 'uuid';
 import { createSlice } from '@reduxjs/toolkit';
 
@@ -77,11 +78,10 @@ const booksSlice = createSlice({
 });
 
 export const {
-
   clearBook,
   addBook,
   removeBook,
-  filterBook
+  filterBook,
 } = booksSlice.actions;
 
 export default booksSlice.reducer;

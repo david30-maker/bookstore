@@ -40,8 +40,7 @@ const categoriesSlice = createSlice({
   name: 'categories',
   initialState,
   reducers: {
-    addCategory: (state, Action) =>
-      Boolean(state.categories.includes(Action.payload)),
+    addCategory: (state, Action) => Boolean(state.categories.includes(Action.payload)),
 
   },
 });

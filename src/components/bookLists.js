@@ -12,7 +12,7 @@ const BooksList = () => {
       if (booksArr.find((book) => book.category === categorySelected)) {
         booksArr = booksArr.find((book) => book.category === categorySelected);
         console.log(booksArr);
-        < BooksList />;
+          <BooksList />;
       } else {
         console.log('No books in this category');
         booksArr = [];
@@ -31,10 +31,13 @@ const BooksList = () => {
       >
         <select>
           {category.map((category) => (
-            <option key={category}
-              value={category}>{category}</option>
-          ))
-          }
+            <option
+              key={category}
+              value={category}
+            >
+              {category}
+            </option>
+          ))}
         </select>
         <button type="submit">Filter</button>
       </form>
