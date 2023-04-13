@@ -14,7 +14,7 @@ const BookItem = ({ book }) => {
         type="button"
         className="book-remove"
         id={JSON.parse(book).id}
-        onClick={(e) => dispatch(removeBook(+e.target.id))}
+        onClick={(evet) => dispatch(removeBook(evet.target.id))}
       >
         Remove Book
       </button>

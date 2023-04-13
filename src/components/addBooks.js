@@ -1,35 +1,56 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { v4 as uuid } from 'uuid';
+import { useState } from 'react';
 import { addBook } from '../redux/books/booksSlice';
+
 
 const AddBook = () => {
   const dispatch = useDispatch();
+  const categories = useSelector((state) => state.categories.categories);
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
 
   const getBook = (evet) => {
     evet.preventDefault();
 
     const newBook = {
-      id: Math.floor(Math.random() * 100),
-      title: evet.target[0].value,
-      category: evet.target[1].value,
-      author: 'Author',
+      id: uuid(),
+      title,
+      author,
+      category,
     };
+    console.log(newBook);
     dispatch(addBook(newBook));
   };
+
   return (
     <form
       className="add-form"
-      onSubmit={(evet) => getBook(evet)}
     >
       <span>Add Book</span>
-      <input type="text" placeholder="title" />
+      <input onChange={(evet) => setTitle(evet.target.value)}
+        type="text" placeholder="title" />
       <select>
-        <option value="Leadership">Leadership</option>
-        <option value="Transform">Transform</option>
-        <option value="Reaction">Reaction</option>
-        <option value="Glory">Glory</option>
-        <option value="Love">Love</option>
+        {categories.map((category) => (
+          <option
+            omSelect={(evet) => setCategory(evet.target.value)}
+            key={category}
+            value={category}
+          >
+            {category}
+          </option>
+        ))}
       </select>
-      <input type="submit" value="Add Book" />
+      <input onChange={(evet) =>
+        setAuthor(evet.target.value)}
+        type="name" placeholder="Author" />
+      <button
+        type="submit"
+        onClick={(evet) => getBook(evet)}
+      >
+        Add Book
+      </button>
     </form>
   );
 };
