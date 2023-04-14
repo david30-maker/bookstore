@@ -1,39 +1,22 @@
+import { useDispatch } from 'react-redux';
 import BooksList from '../components/bookLists';
 import AddBook from '../components/addBooks';
+import { clearBook } from '../redux/books/booksSlice';
 
-// const books = [
-//   {
-//     id: 1,
-//     title: 'How To Be Led By The Spirit',
-//     author: 'Kenneth Hagin',
-//   },
-//   {
-//     id: 2,
-//     title: 'The Principle of The Kingdom ',
-//     author: 'Myles Munroe',
-//   },
-//   {
-//     id: 3,
-//     title: 'Experiencing The Presence',
-//     author: 'Charles Finney',
-//   },
-// ];
-// const Book = () => (
-//   <div>
-//     <h1>All Books</h1>
-//     <BooksList books={books} />
-//     <AddBook />
-//   </div>
-// );
-
-// export default Book;
-
-const Books = () => (
-  <div>
-    <h1>All Books</h1>
-    <BooksList />
-    <AddBook />
-  </div>
-);
+const Books = () => {
+  const dispatch = useDispatch();
+  return (
+    <div>
+      <BooksList />
+      <AddBook />
+      <button
+        onClick={() => dispatch(clearBook())}
+        type="button"
+      >
+        Clear Books
+      </button>
+    </div>
+  );
+};
 
 export default Books;
