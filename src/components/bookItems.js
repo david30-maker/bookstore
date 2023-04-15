@@ -4,15 +4,14 @@ import { removeBook, deleteBook } from '../redux/books/booksSlice';
 
 const BookItem = ({ book, id }) => {
   const dispatch = useDispatch();
-
   return (
     <div className="book-wrap">
-      <div className="book-details">
+      <div className="book-detail">
         <div className="book-category">{JSON.parse(book).category}</div>
         <div className="book-title">{JSON.parse(book).title}</div>
         <div className="book-item-author">{JSON.parse(book).author}</div>
         <div className="book-detail-btn">
-          <button type="button" className="book-comment">Comments</button>
+          <button type="button" className="book-comment">Comment</button>
           <button
             type="button"
             className="book-remove"
@@ -35,7 +34,7 @@ const BookItem = ({ book, id }) => {
         </div>
       </div>
       <div className="book-item-progress">
-        <div className="progress-title">CURRENT CHAPTER</div>
+        <div className="progress-title">Current Chapter</div>
         <div className="progress-detail">Chapter 17</div>
         <button type="button" className="progress-update">Update Progress</button>
       </div>

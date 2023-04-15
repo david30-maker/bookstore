@@ -5,10 +5,10 @@ import BookItem from './bookItems';
 
 const BooksList = () => {
   const dispatch = useDispatch();
-  const bookObject = useSelector((store) => store.books);
   useEffect(() => {
     dispatch(fetchBooks());
   });
+  const bookObject = useSelector((store) => store.books);
   const bookData = (Object.entries(bookObject));
 
   return (

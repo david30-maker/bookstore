@@ -1,14 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import axios from 'axios';
 
 const initialState = {
   books: [],
-  appiID: '0GHbRJM3Rw0sScdVnx5z',
-  url: 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/0GHbRJM3Rw0sScdVnx5z/',
+  appiID: 'PL5veETvNbz6Vn5UAfrl',
+  // 'LAAHlUMcF9ANGB3iuJGP',
+  url: 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/PL5veETvNbz6Vn5UAfrl/books',
 };
 
-const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/0GHbRJM3Rw0sScdVnx5z/';
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/PL5veETvNbz6Vn5UAfrl/books';
 
 export const createApps = createAsyncThunk('books/createApps',
   async () => {
