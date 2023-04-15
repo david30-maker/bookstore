@@ -2,7 +2,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuid } from 'uuid';
 import { useState } from 'react';
-import { addBook } from '../redux/books/booksSlice';
+import { addBook, postBook } from '../redux/books/booksSlice';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -15,13 +15,13 @@ const AddBook = () => {
     evet.preventDefault();
 
     const newBook = {
-      id: uuid(),
+      item_id: uuid(),
       title,
       author,
-      category,
+      category: category || categories[0],
     };
-    console.log(newBook);
     dispatch(addBook(newBook));
+    dispatch(postBook(newBook));
   };
 
   return (
