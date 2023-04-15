@@ -17,7 +17,10 @@ const BookItem = ({ book, id }) => {
             type="button"
             className="book-remove"
             id={id}
-            onClick={(evet) => dispatch(removeBook(evet.target.id))}
+            onClick={(evet) => {
+              dispatch(removeBook(evet.target.id));
+              dispatch(deleteBook(evet.target.id));
+            }}
           >
             Remove Book
           </button>

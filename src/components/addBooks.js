@@ -2,7 +2,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuid } from 'uuid';
 import { useState } from 'react';
-import { addBook, postBook } from '../redux/books/booksSlice';
+import { addBook, postBooks } from '../redux/books/booksSlice';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ const AddBook = () => {
       category: category || categories[0],
     };
     dispatch(addBook(newBook));
-    dispatch(postBook(newBook));
+    dispatch(postBooks(newBook));
   };
 
   return (
