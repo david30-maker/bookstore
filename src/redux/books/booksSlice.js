@@ -1,14 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-
+// PL5veETvNbz6Vn5UAfrl
 const initialState = {
   books: [],
-  appiID: 'PL5veETvNbz6Vn5UAfrl',
-  // 'LAAHlUMcF9ANGB3iuJGP',
-  url: 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/PL5veETvNbz6Vn5UAfrl/books',
 };
 
-const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/PL5veETvNbz6Vn5UAfrl/books';
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/GEuAWlP9fDuVTZwC5FdL';
 
 export const createApps = createAsyncThunk('books/createApps',
   async () => {
@@ -60,13 +57,14 @@ const booksSlice = createSlice({
     removeBook: (state, action) => {
       const bookId = action.payload;
       const curState = state;
+      // eslint-disable-next-line indent
       delete curState.books[bookId];
       return curState;
     },
     filterBook: (state, action) => {
       const category = action.payload;
       const curState = state;
-      curState.books = curState.books.filter((book) => book.category === category);
+      curState.books = state.books.find((book) => book.category === category);
       return curState;
     },
   },
