@@ -1,53 +1,27 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchBooks } from '../redux/books/booksSlice';
 import BookItem from './bookItems';
 
-const BooksList = () => {
-  let booksArr = useSelector((store) => store.books).books;
-  const category = useSelector((store) => store.categories).categories;
+const BookList = () => {
+  const dispatch = useDispatch();
+  const booksObject = useSelector((store) => store.books).books;
 
-  const filterPer = (evet) => {
-    evet.preventDefault();
-    const categorySelected = evet.target[0].value;
-    if (category.includes(categorySelected)) {
-      if (booksArr.find((book) => book.category === categorySelected)) {
-        booksArr = booksArr.find((book) => book.category === categorySelected);
-        console.log(booksArr);
-          <BooksList />;
-      } else {
-        console.log('No books in this category');
-        booksArr = [];
-      }
-    } else {
-      console.log('No category selected');
-    }
-  };
+  useEffect(() => {
+    dispatch(fetchBooks());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
+  const bookData = (Object.entries(booksObject));
   return (
-    <div>
-      <h1>All Books</h1>
-      <form
-        onSubmit={(evet) => filterPer(evet)}
-        className="filter-form"
-      >
-        <select>
-          {category.map((category) => (
-            <option
-              key={category}
-              value={category}
-            >
-              {category}
-            </option>
-          ))}
-        </select>
-        <button type="submit">Filter</button>
-      </form>
-      {booksArr.map((book) => (
-        <div key={book.id}>
-          <BookItem book={JSON.stringify(book)} />
-        </div>
-      ))}
+    <div className="books-wrap-list">
+      {
+        bookData.map(
+          (book) => <BookItem key={book[0]} id={book[0]} book={JSON.stringify(book[1][0])} />,
+        )
+      }
     </div>
   );
 };
 
-export default BooksList;
+export default BookList;
