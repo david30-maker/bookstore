@@ -22,28 +22,31 @@ const AddBook = () => {
   };
 
   return (
-    <form className="book-form">
-      <span>ADD NEW BOOK</span>
-      <input onChange={(evet) => setTitle(evet.target.value)} type="text" placeholder="Book title" />
-      <select>
-        {categories.map((category) => (
-          <option
-            onSelect={(evet) => setCategory(evet.target.value)}
-            key={category}
-            value={category}
-          >
-            {category}
-          </option>
-        ))}
-      </select>
-      <input onChange={(evet) => setAuthor(evet.target.value)} type="name" placeholder="Author" />
-      <button
-        type="submit"
-        onClick={(evet) => getNewBook(evet)}
-      >
-        Add Book
-      </button>
-    </form>
+    <>
+      <div className="line" />
+      <span className="add-book">Add New Book</span>
+      <form className="book-form">
+        <input onChange={(evet) => setTitle(evet.target.value)} type="text" placeholder="Book title" className="input-title" />
+        <select onChange={(evet) => setCategory(evet.target.value)} className="categories-selected">
+          {categories.map((category) => (
+            <option
+              key={category}
+              value={category}
+            >
+              {category}
+            </option>
+          ))}
+        </select>
+        <input onChange={(evet) => setAuthor(evet.target.value)} type="name" placeholder="author" className="iput-author" />
+        <button
+          type="submit"
+          onClick={(evet) => getNewBook(evet)}
+          className="add-book-btns"
+        >
+          Add Book
+        </button>
+      </form>
+    </>
   );
 };
 
