@@ -13,10 +13,10 @@
   padding: 0;
 }
 
-.book-item-wrap {
+.book-wrap {
   width: 100%;
   height: 10.625rem;
-  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  padding: 2rem 9.18rem 1.62rem 1.68rem;
   border-radius: 4px;
   border: solid 1px var(--white);
   background-color: var(--white-two);
@@ -25,20 +25,20 @@
   align-items: center;
 }
 
-.book-details {
+.book-detail {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 50rem;
-  height: 6.25rem;
+  height: 6.2rem;
 }
 
-.book-item__category {
-  height: 1.125rem;
-  margin: 0 2.438rem 0 0;
+.book-category {
+  height: 1.12rem;
+  margin: 0 2.43rem 0 0;
   opacity: 0.5;
   font-family: Montserrat, serif;
-  font-size: 0.875rem;
+  font-size: 0.87rem;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -47,10 +47,10 @@
   color: var(--black-two);
 }
 
-.book-item__title {
-  height: 1.813rem;
+.book-title {
+  height: 1.81rem;
   font-family: RobotoSlab, sans-serif;
-  font-size: 1.375rem;
+  font-size: 1.37rem;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -60,7 +60,7 @@
   text-transform: capitalize;
 }
 
-.book-item__author {
+.book-author {
   height: 1.188rem;
   margin: 0.25rem 0 1rem 0;
   font-family: RobotoSlab, sans-serif;
@@ -74,19 +74,19 @@
   text-transform: capitalize;
 }
 
-.book-details-btns {
+.book-detail-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 4.563rem;
+  width: 4.56rem;
 }
 
-.book-details-btns > button {
-  width: 4.563rem;
-  height: 1.188rem;
-  margin: 0.188rem 0.938rem 0.125rem 0;
+.book-detail-btn > button {
+  width: 4.56rem;
+  height: 1.18rem;
+  margin: 0.18rem 0.93rem 0.12rem 0;
   font-family: RobotoSlab, sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.87rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -97,34 +97,34 @@
   border: none;
 }
 
-.line-divide {
-  width: 0.125rem;
+.line-1 {
+  width: 0.12rem;
   height: 1.5rem;
-  margin: 0.75rem 1.063rem 0 0.938rem;
+  margin: 0.75rem 1.06rem 0 0.93rem;
   border: solid 1px var(--white);
 }
 
-.Line-2 {
+.line-divide-2 {
   width: 0.125rem;
   height: 4.375rem;
-  margin: 1.125rem 3.688rem 0 4.938rem;
+  margin: 1.125rem 3.68rem 0 4.93rem;
 }
 
-.book-item__status {
+.book-status {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
 
-.Oval-2 {
-  width: 4.25rem;
-  height: 4.25rem;
+.circle {
+  width: 4.2rem;
+  height: 4.2rem;
   border-style: inset;
   border-width: 6px;
-  border-top-color: #0291ffd8;
-  border-right-color: #0290ff;
-  border-bottom-color: #0291fff5;
+  border-top-color: #1298ffd8;
+  border-right-color: #0383e6;
+  border-bottom-color: #0388eef5;
   transform: rotate(30deg);
   border-radius: 50%;
 }
@@ -134,10 +134,10 @@
   flex-direction: column;
 }
 
-.status-data__title {
-  width: 4.25rem;
-  height: 2.438rem;
-  margin: 0.063rem 5.75rem 0 0.688rem;
+.status-data-title {
+  width: 4.2rem;
+  height: 2.43rem;
+  margin: 0.06rem 5.7rem 0 0.68rem;
   font-family: Montserrat, serif;
   font-size: 2rem;
   font-weight: normal;
@@ -148,13 +148,13 @@
   color: var(--black-two);
 }
 
-.status-data__completed {
+.status-data-completed {
   width: 5rem;
-  height: 1.125rem;
-  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  height: 1.12rem;
+  margin: 0.43rem 4.93rem 0.75rem 0.75rem;
   opacity: 0.5;
   font-family: Montserrat, serif;
-  font-size: 0.875rem;
+  font-size: 0.87rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -163,18 +163,18 @@
   color: var(--black-two);
 }
 
-.book-item__progress {
+.book-item-progress {
   display: flex;
   flex-direction: column;
 }
 
 .progress-title {
   width: 100%;
-  height: 1.125rem;
-  margin: 0.063rem 3.625rem 0 3.688rem;
+  height: 1.12rem;
+  margin: 0.06rem 3.62rem 0 3.68rem;
   opacity: 0.5;
   font-family: RobotoSlab, sans-serif;
-  font-size: 0.813rem;
+  font-size: 0.81rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -183,10 +183,10 @@
   color: var(--black-two);
 }
 
-.progress-details {
+.progress-detail {
   width: 100%;
-  height: 1.313rem;
-  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  height: 1.3rem;
+  margin: 0.43rem 6.8rem 0.25rem 3.68rem;
   font-family: RobotoSlab, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -199,18 +199,18 @@
 
 .progress-update {
   width: 11.5rem;
-  height: 2.063rem;
-  margin: 0.75rem 0 0.563rem 3.688rem;
-  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  height: 2.06rem;
+  margin: 0.75rem 0 0.56rem 3.68rem;
+  padding: 0.43rem 1.18rem 0.5rem 1.37rem;
   border: none;
   border-radius: 3px;
   color: #fff;
-  background-color: #0291ffd7;
+  background-color: #0287ecd7;
 }
 
 .Line {
   width: 75rem;
-  height: 0.125rem;
-  margin: 2.5rem 0.063rem 1.813rem 0;
+  height: 0.12rem;
+  margin: 2.5rem 0.06rem 1.81rem 0;
   border: solid 1px var(--white);
 }
