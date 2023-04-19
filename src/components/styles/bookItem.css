@@ -1,0 +1,216 @@
+:root {
+  --white: #e8e8e8;
+  --white-two: #fff;
+  --black-two: #121212;
+  --cool-blue: #4386bf;
+  --medium-blue: #307bbe;
+  --azure: #0290ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.book-wrap {
+  width: 100%;
+  height: 10.625rem;
+  padding: 2rem 9.18rem 1.62rem 1.68rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: var(--white-two);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.book-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50rem;
+  height: 6.2rem;
+}
+
+.book-category {
+  height: 1.12rem;
+  margin: 0 2.43rem 0 0;
+  opacity: 0.5;
+  font-family: Montserrat, serif;
+  font-size: 0.87rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.book-title {
+  height: 1.81rem;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 1.37rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: var(--black-two);
+  text-transform: capitalize;
+}
+
+.book-author {
+  height: 1.188rem;
+  margin: 0.25rem 0 1rem 0;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--cool-blue);
+  text-transform: capitalize;
+}
+
+.book-detail-btn > button {
+  width: 4.56rem;
+  height: 1.18rem;
+  margin: 0.18rem 0.93rem 0.12rem 0;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.87rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--cool-blue);
+  background-color: transparent;
+  border: none;
+}
+
+.book-detail-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 4.56rem;
+}
+
+.line-1 {
+  width: 0.12rem;
+  height: 1.5rem;
+  margin: 0.75rem 1.06rem 0 0.93rem;
+  border: solid 1px var(--white);
+}
+
+.line-divide-2 {
+  width: 0.125rem;
+  height: 4.375rem;
+  margin: 1.125rem 3.68rem 0 4.93rem;
+}
+
+.book-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.circle {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-style: inset;
+  border-width: 6px;
+  border-top-color: #1298ffd8;
+  border-right-color: #0383e6;
+  border-bottom-color: #0388eef5;
+  transform: rotate(30deg);
+  border-radius: 50%;
+}
+
+.status-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.status-data-title {
+  width: 4.2rem;
+  height: 2.43rem;
+  margin: 0.06rem 5.7rem 0 0.68rem;
+  font-family: Montserrat, serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.status-data-completed {
+  width: 5rem;
+  height: 1.12rem;
+  margin: 0.43rem 4.93rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: Montserrat, serif;
+  font-size: 0.87rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.book-item-progress {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-title {
+  width: 100%;
+  height: 1.12rem;
+  margin: 0.06rem 3.62rem 0 3.68rem;
+  opacity: 0.5;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.81rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.progress-detail {
+  width: 100%;
+  height: 1.3rem;
+  margin: 0.43rem 6.8rem 0.25rem 3.68rem;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-two);
+}
+
+.progress-update {
+  width: 11.5rem;
+  height: 2.06rem;
+  margin: 0.75rem 0 0.56rem 3.68rem;
+  padding: 0.43rem 1.18rem 0.5rem 1.37rem;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #0287ecd7;
+}
+
+.Line {
+  width: 75rem;
+  height: 0.12rem;
+  margin: 2.5rem 0.06rem 1.81rem 0;
+  border: solid 1px var(--white);
+}

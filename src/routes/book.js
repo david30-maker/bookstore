@@ -2,7 +2,7 @@ import BookList from '../components/bookLists';
 import AddBook from '../components/addBooks';
 
 const Books = () => (
-  <div>
+  <div className="container">
     <BookList />
     <AddBook />
   </div>

@@ -98,9 +98,6 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **[component]**
-- **[fetch_api]**
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -125,7 +122,7 @@ If you like this project please give it star...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like say to thank Microverse
+I would like say to thank Microverse and Zeplin
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  -->

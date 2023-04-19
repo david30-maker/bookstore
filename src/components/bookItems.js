@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook, deleteBook } from '../redux/books/booksSlice';
+import './styles/bookItem.css';
 
 const BookItem = ({ book, id }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="book-wrap-item">
+    <div className="book-wrap">
       <div className="book-detail">
         <div className="book-category">{JSON.parse(book).category}</div>
         <div className="book-title">{JSON.parse(book).title}</div>
@@ -15,7 +16,7 @@ const BookItem = ({ book, id }) => {
           <button type="button" className="book-comment">Comments</button>
           <button
             type="button"
-            className="book-item__remove"
+            className="book-remove"
             id={id}
             onClick={(evet) => {
               dispatch(removeBook(evet.target.id));
@@ -24,16 +25,18 @@ const BookItem = ({ book, id }) => {
           >
             Remove
           </button>
+          <div className="divide-Line" />
           <button type="button" className="book-edit">Edit</button>
         </div>
       </div>
       <div className="book-status">
-        <div className="Oval-2" />
+        <div className="circle" />
         <div className="status-data">
           <span className="status-data-title">64%</span>
           <span className="status-data-completed">Completed</span>
         </div>
       </div>
+      <div className="line-1 line-divide-2" />
       <div className="book-item-progress">
         <div className="progress-title">Current Chapter</div>
         <div className="progress-detail">Chapter 17</div>

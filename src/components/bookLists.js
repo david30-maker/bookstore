@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchBooks } from '../redux/books/booksSlice';
 import BookItem from './bookItems';
+import './styles/bookList.css';
 
 const BookList = () => {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ const BookList = () => {
 
   const bookData = (Object.entries(booksObject));
   return (
-    <div className="books-wrap-list">
+    <div className="book-wrap-list">
       {
         bookData.map(
           (book) => <BookItem key={book[0]} id={book[0]} book={JSON.stringify(book[1][0])} />,

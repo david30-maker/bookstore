@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import './styles/navBar.css';
 
 const Navbar = () => {
   const links = [
@@ -7,12 +8,13 @@ const Navbar = () => {
   ];
   return (
     <nav className="navbar">
-      <h1>Bookstore CMS</h1>
-      <ul className="nav-item">
+      <a className="nav-anch" href="/">Bookstore CMS</a>
+      <ul className="nav-link-items">
         {links.map((link) => (
-          <li key={link.name}><NavLink to={link.path}>{link.name}</NavLink></li>
+          <li key={link.name}><NavLink className="nav-link active-link" to={link.path}>{link.name}</NavLink></li>
         ))}
       </ul>
+      <button className="icon-button" type="button"><span className="material-icon primary-color">person</span></button>
     </nav>
   );
 };
