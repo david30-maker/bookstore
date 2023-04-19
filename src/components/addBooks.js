@@ -38,7 +38,7 @@ const AddBook = () => {
             </option>
           ))}
         </select>
-        <input onChange={(evet) => setAuthor(evet.target.value)} type="name" placeholder="author" className="iput-author" />
+        <input onChange={(evet) => setAuthor(evet.target.value)} type="name" placeholder="author" className="input-author" />
         <button
           type="submit"
           onClick={(evet) => getNewBook(evet)}

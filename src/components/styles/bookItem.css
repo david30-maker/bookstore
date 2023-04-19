@@ -74,13 +74,6 @@
   text-transform: capitalize;
 }
 
-.book-detail-btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 4.56rem;
-}
-
 .book-detail-btn > button {
   width: 4.56rem;
   height: 1.18rem;
@@ -95,6 +88,13 @@
   color: var(--cool-blue);
   background-color: transparent;
   border: none;
+}
+
+.book-detail-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 4.56rem;
 }
 
 .line-1 {
