@@ -2,6 +2,7 @@ import { v4 as uuid } from 'uuid';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { addBook, postBooks } from '../redux/books/booksSlice';
+import './styles/addBook.css';
 
 const AddBook = () => {
   const dispatch = useDispatch();

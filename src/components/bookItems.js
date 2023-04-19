@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook, deleteBook } from '../redux/books/booksSlice';
+import './styles/bookItem.css';
 
 const BookItem = ({ book, id }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="book-wrap-item">
+    <div className="book-wrap">
       <div className="book-detail">
         <div className="book-category">{JSON.parse(book).category}</div>
         <div className="book-title">{JSON.parse(book).title}</div>
@@ -24,6 +25,7 @@ const BookItem = ({ book, id }) => {
           >
             Remove
           </button>
+          <div className="divide-Line" />
           <button type="button" className="book-edit">Edit</button>
         </div>
       </div>
